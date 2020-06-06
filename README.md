@@ -7,7 +7,11 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## Requirements
 
-In order to build dwm you need the Xlib header files.
+In order to build dwm you need the Xlib header files. In Ubuntu systems, you
+can find them on the following packages:
+- `libx11-dev`
+- `libxft-dev`
+- `libxinerama-dev`
 
 
 ## Installation
@@ -58,6 +62,9 @@ The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
 
 ## Carlos' version
+
+For more information about how I use dwm on my system, check 
+[my system repo](https://github.com/CarlosMecha/system/tree/master/wm).
 
 ### Patches
 
