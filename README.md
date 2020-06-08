@@ -80,8 +80,16 @@ put the latest code from the official repository.
 
 This section describes custom keybindings not present in the official distribution.
 
-_None for now, working on it._
+* Mod key is the Super (Windows) key instead of Alt.
+* Tag keys are marked as the left top numbers row, as \`, 1, 2, 3 and 4.
 
+### Other changes
+
+* Removed Firefox from spawning on tag 9.
+* Increase master area to 70%.
+* Disabled resize hints.
+* Using `gnome-terminal` instead of `st` (for now).
+* Limited number of tags to 5 [0..4].
 
 ## License
 
