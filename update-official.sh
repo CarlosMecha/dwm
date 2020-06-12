@@ -10,7 +10,10 @@ git remote add official git://git.suckless.org/dwm
 git fetch official
 
 # Use branch `official` as `official/master`
-git checkout -b official --track official/master
+# Only use this if official is not a local branch
+# git checkout -b official --track official/master
+git checkout official
+git merge official/master
 
 # Push the changes to the origin repo
 git push -u origin official
