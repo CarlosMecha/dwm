@@ -82,6 +82,9 @@ This section describes custom keybindings not present in the official distributi
 
 * Mod key is the Super (Windows) key instead of Alt.
 * Tag keys are marked as the left top numbers row, as \`, 1, 2, 3 and 4.
+* To kill a client, use Mod+q.
+* Dmenu is launched using Mod+d.
+* Increment and decrement master windows is mapped to `[` and `]`.
 
 ### Other changes
 
