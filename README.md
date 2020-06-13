@@ -70,7 +70,7 @@ For more information about how I use dwm on my system, check
 
 This version of dwm has the following patches applied:
 
-_None for now, working on it._
+* Systray from [this](https://dwm.suckless.org/patches/systray/dwm-systray-20200610-f09418b.diff) patch.
 
 Patches are added to the master branch, and updated from the `official` branch
 that tracks main dwm development. Use `update-official.sh` script to automatically
