@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
+// Key sym
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -62,6 +65,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenudesktopcmd[] = { "j4-dmenu-desktop", NULL };
 static const char *termcmd[]  = { "gnome-terminal", NULL };
+static const char *increasevol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *decreasevol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *togglemute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +101,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      3)
 	TAGKEYS(                        XK_4,                      4)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+        // Volume
+	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = increasevol } },
+	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = decreasevol } },
+	{ 0,                            XF86XK_AudioMute,               spawn,          {.v = togglemute } },
 };
 
 /* button definitions */

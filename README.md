@@ -86,6 +86,7 @@ This section describes custom keybindings not present in the official distributi
 * Dmenu but only for `.desktop` files is launched using Mod+d.
 * Dmenu for your PATH is launched using Mod+Shift+d.
 * Increment and decrement master windows is mapped to `[` and `]`.
+* Media keys (increase, decrease volume and mute) are mapped to `pactl set-sink-*` actions.
 
 ### Other changes
 
