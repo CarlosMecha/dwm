@@ -34,7 +34,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
 };
 
 /* layout(s) */
@@ -68,7 +68,10 @@ static const char *termcmd[]  = { "gnome-terminal", NULL };
 static const char *increasevol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *decreasevol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *togglemute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *screenshotcmd[] = { "screenshot", "hotkey", NULL };
+static const char *screenshotselectcmd[] = { "screenshot", "select", "hotkey", NULL };
 
+// Keys defined in keysymdef.h and XF86keysym.h
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenudesktopcmd } },
@@ -106,6 +109,10 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = increasevol } },
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = decreasevol } },
 	{ 0,                            XF86XK_AudioMute,               spawn,          {.v = togglemute } },
+ 
+        // Screenshots
+	{ ShiftMask,                    XK_Print,               spawn,          {.v = screenshotcmd } },
+	{ 0,                            XK_Print,               spawn,          {.v = screenshotselectcmd } },
 };
 
 /* button definitions */

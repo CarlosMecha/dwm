@@ -87,10 +87,12 @@ This section describes custom keybindings not present in the official distributi
 * Dmenu for your PATH is launched using Mod+Shift+d.
 * Increment and decrement master windows is mapped to `[` and `]`.
 * Media keys (increase, decrease volume and mute) are mapped to `pactl set-sink-*` actions.
+* Print (and Shift+Print) for capturing a section or the entire screen.
 
 ### Other changes
 
 * Removed Firefox from spawning on tag 9.
+* Removed Gimp from spawning in floating mode.
 * Increase master area to 70%.
 * Disabled resize hints.
 * Using `gnome-terminal` instead of `st` (for now).
