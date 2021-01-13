@@ -70,6 +70,8 @@ static const char *decreasevol[] = { "pactl", "set-sink-volume", "0", "-5%", NUL
 static const char *togglemute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *screenshotcmd[] = { "screenshot", "hotkey", NULL };
 static const char *screenshotselectcmd[] = { "screenshot", "select", "hotkey", NULL };
+static const char *powermenucmd[] = { "power", "-i", NULL };
+static const char *characterscmd[] = { "gnome-characters", NULL };
 
 // Keys defined in keysymdef.h and XF86keysym.h
 static Key keys[] = {
@@ -103,7 +105,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_2,                      2)
 	TAGKEYS(                        XK_3,                      3)
 	TAGKEYS(                        XK_4,                      4)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,          spawn,          {.v = powermenucmd } },
+        { MODKEY,                       XK_Multi_key,  spawn,          {.v = characterscmd } },
 
         // Volume
 	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = increasevol } },

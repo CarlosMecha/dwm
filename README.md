@@ -88,6 +88,8 @@ This section describes custom keybindings not present in the official distributi
 * Increment and decrement master windows is mapped to `[` and `]`.
 * Media keys (increase, decrease volume and mute) are mapped to `pactl set-sink-*` actions.
 * Print (and Shift+Print) for capturing a section or the entire screen.
+* Power menu (reboot, shut off, hibernate, etc) using Mod+Shift+q.
+* Characters menu using Mod+Compose key.
 
 ### Other changes
 
