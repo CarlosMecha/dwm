@@ -90,6 +90,8 @@ This section describes custom keybindings not present in the official distributi
 * Print (and Shift+Print) for capturing a section or the entire screen.
 * Power menu (reboot, shut off, hibernate, etc) using Mod+Shift+q.
 * Characters menu using Mod+Compose key.
+* Add Mod+b and Mod+B to launch the bookmarks menu.
+* Change toggle the bar using Mod+- instead.
 
 ### Other changes
 

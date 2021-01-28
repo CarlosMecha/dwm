@@ -72,6 +72,8 @@ static const char *screenshotcmd[] = { "screenshot", "hotkey", NULL };
 static const char *screenshotselectcmd[] = { "screenshot", "select", "hotkey", NULL };
 static const char *powermenucmd[] = { "power", "-i", NULL };
 static const char *characterscmd[] = { "gnome-characters", NULL };
+static const char *bookmarkscmd[] = { "bookmarks", "dmenu", NULL };
+static const char *bookmarksnwcmd[] = { "bookmarks", "dmenu", "-w", NULL };
 
 // Keys defined in keysymdef.h and XF86keysym.h
 static Key keys[] = {
@@ -79,7 +81,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenudesktopcmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_minus,  togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_bracketleft,      incnmaster,     {.i = +1 } },
@@ -116,6 +118,10 @@ static Key keys[] = {
         // Screenshots
 	{ ShiftMask,                    XK_Print,               spawn,          {.v = screenshotcmd } },
 	{ 0,                            XK_Print,               spawn,          {.v = screenshotselectcmd } },
+
+        // Bookmarks
+        { MODKEY,                       XK_b,                   spawn,          {.v = bookmarkscmd } },
+	{ MODKEY|ShiftMask,             XK_b,                   spawn,          {.v = bookmarksnwcmd } },
 };
 
 /* button definitions */
