@@ -26,7 +26,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "`", "1", "2", "3", "4" };
+static const char *tags[] = { "🌍", "1", "2", "3", "4", "🗩", "𝄞" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -107,6 +107,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_2,                      2)
 	TAGKEYS(                        XK_3,                      3)
 	TAGKEYS(                        XK_4,                      4)
+	TAGKEYS(                        XK_5,                      5)
+	TAGKEYS(                        XK_6,                      6)
 	{ MODKEY|ShiftMask,             XK_q,          spawn,          {.v = powermenucmd } },
         { MODKEY,                       XK_Multi_key,  spawn,          {.v = characterscmd } },
 

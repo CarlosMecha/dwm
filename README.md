@@ -81,7 +81,7 @@ put the latest code from the official repository.
 This section describes custom keybindings not present in the official distribution.
 
 * Mod key is the Super (Windows) key instead of Alt.
-* Tag keys are marked as the left top numbers row, as \`, 1, 2, 3 and 4.
+* Tag keys are marked as the left top numbers row, as \`, 1, 2, 3, 4, 5 and 6.
 * To kill a client, use Mod+q.
 * Dmenu but only for `.desktop` files is launched using Mod+d.
 * Dmenu for your PATH is launched using Mod+Shift+d.
@@ -100,7 +100,7 @@ This section describes custom keybindings not present in the official distributi
 * Increase master area to 70%.
 * Disabled resize hints.
 * Using `gnome-terminal` instead of `st` (for now).
-* Limited number of tags to 5 [0..4].
+* Limited number of tags to 7 [0..6].
 
 ## License
 
