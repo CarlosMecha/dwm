@@ -71,6 +71,9 @@ For more information about how I use dwm on my system, check
 This version of dwm has the following patches applied:
 
 * Systray from [this](https://dwm.suckless.org/patches/systray/dwm-systray-20200610-f09418b.diff) patch.
+* Not focus when moving the mouse from
+  [this](https://dwm.suckless.org/patches/focusonclick/dwm-focusonclick-20200110-61bb8b2.diff)
+patch.
 
 Patches are added to the master branch, and updated from the `official` branch
 that tracks main dwm development. Use `update-official.sh` script to automatically
