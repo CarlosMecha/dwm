@@ -84,7 +84,7 @@ put the latest code from the official repository.
 This section describes custom keybindings not present in the official distribution.
 
 * Mod key is the Super (Windows) key instead of Alt.
-* Tag keys are marked as the left top numbers row, as \`, 1, 2, 3, 4, 5 and 6.
+* Tag keys are marked as the left top numbers row, as \`, 1, 2, 3 and 4.
 * To kill a client, use Mod+q.
 * Dmenu but only for `.desktop` files is launched using Mod+d.
 * Dmenu for your PATH is launched using Mod+Shift+d.
@@ -95,6 +95,7 @@ This section describes custom keybindings not present in the official distributi
 * Characters menu using Mod+Compose key.
 * Add Mod+b and Mod+B to launch the bookmarks menu.
 * Change toggle the bar using Mod+- instead.
+* Increase the visual clue of selected window.
 
 ### Other changes
 

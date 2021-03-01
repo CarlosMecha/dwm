@@ -4,7 +4,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -20,14 +20,17 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_granate[]     = "#461412";
+static const char col_yellow[]      = "#ffd476";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_yellow, col_granate,  col_yellow  },
+	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
 /* tagging */
-static const char *tags[] = { "🌍", "1", "2", "3", "4", "🗩", "𝄞" };
+static const char *tags[] = { "🌍", "➊", "➋", "➌", "➍" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -39,7 +42,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.70; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.80; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
@@ -108,8 +111,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_2,                      2)
 	TAGKEYS(                        XK_3,                      3)
 	TAGKEYS(                        XK_4,                      4)
-	TAGKEYS(                        XK_5,                      5)
-	TAGKEYS(                        XK_6,                      6)
 	{ MODKEY|ShiftMask,             XK_q,          spawn,          {.v = powermenucmd } },
         { MODKEY,                       XK_Multi_key,  spawn,          {.v = characterscmd } },
 
