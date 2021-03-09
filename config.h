@@ -69,9 +69,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenudesktopcmd[] = { "j4-dmenu-desktop", NULL };
 static const char *termcmd[]  = { "gnome-terminal", NULL };
-static const char *increasevol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
-static const char *decreasevol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
-static const char *togglemute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *increasevol[] = { "sound", "volume-up", NULL };
+static const char *decreasevol[] = { "sound", "volume-down", NULL };
+static const char *togglemute[] = { "sound", "toggle-mute", NULL };
+static const char *togglemutemic[] = { "sound", "toggle-mute-mic", NULL };
 static const char *screenshotcmd[] = { "screenshot", "hotkey", NULL };
 static const char *screenshotselectcmd[] = { "screenshot", "select", "hotkey", NULL };
 static const char *powermenucmd[] = { "power", "-i", NULL };
@@ -118,6 +119,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = increasevol } },
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = decreasevol } },
 	{ 0,                            XF86XK_AudioMute,               spawn,          {.v = togglemute } },
+        { 0,                            XF86XK_AudioMicMute,            spawn,          {.v = togglemutemic } },
  
         // Screenshots
 	{ ShiftMask,                    XK_Print,               spawn,          {.v = screenshotcmd } },
