@@ -74,6 +74,7 @@ This version of dwm has the following patches applied:
 * Not focus when moving the mouse from
   [this](https://dwm.suckless.org/patches/focusonclick/dwm-focusonclick-20200110-61bb8b2.diff)
 patch.
+* Column layout from [this](https://dwm.suckless.org/patches/columns/dwm-columns-6.0.diff) patch.
 
 Patches are added to the master branch, and updated from the `official` branch
 that tracks main dwm development. Use `update-official.sh` script to automatically
@@ -95,7 +96,8 @@ This section describes custom keybindings not present in the official distributi
 * Characters menu using Mod+Compose key.
 * Add Mod+b and Mod+B to launch the bookmarks menu.
 * Change toggle the bar using Mod+- instead.
-* Increase the visual clue of selected window.
+* Select `columns` layout with Mod+c.
+
 
 ### Other changes
 
@@ -104,7 +106,8 @@ This section describes custom keybindings not present in the official distributi
 * Increase master area to 70%.
 * Disabled resize hints.
 * Using `gnome-terminal` instead of `st` (for now).
-* Limited number of tags to 7 [0..6].
+* Limited number of tags to 5 [0..4].
+* Increase the visual clue of selected window.
 
 ## License
 
