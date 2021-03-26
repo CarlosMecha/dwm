@@ -80,6 +80,8 @@ static const char *powermenucmd[] = { "power", "-i", NULL };
 static const char *characterscmd[] = { "gnome-characters", NULL };
 static const char *bookmarkscmd[] = { "bookmarks", "dmenu", NULL };
 static const char *bookmarksnwcmd[] = { "bookmarks", "dmenu", "-w", NULL };
+static const char *displaysmenucmd[] = { "displays", "-i", NULL };
+static const char *displaystogglecmd[] = { "displays", "t", NULL };
 
 // Keys defined in keysymdef.h and XF86keysym.h
 static Key keys[] = {
@@ -115,6 +117,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      3)
 	TAGKEYS(                        XK_4,                      4)
 	{ MODKEY|ShiftMask,             XK_q,          spawn,          {.v = powermenucmd } },
+	{ MODKEY,                       XK_p,          spawn,          {.v = displaystogglecmd } },
+	{ MODKEY|ShiftMask,             XK_p,          spawn,          {.v = displaysmenucmd } },
         { MODKEY,                       XK_Multi_key,  spawn,          {.v = characterscmd } },
 
         // Volume

@@ -97,6 +97,8 @@ This section describes custom keybindings not present in the official distributi
 * Add Mod+b and Mod+B to launch the bookmarks menu.
 * Change toggle the bar using Mod+- instead.
 * Select `columns` layout with Mod+c.
+* Displays menu (builtin, external modes) using Mod+p for toggling between builtin and external, or
+  Mod+Shift+p to launch the menu.
 
 
 ### Other changes
