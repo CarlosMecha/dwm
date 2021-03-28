@@ -110,6 +110,7 @@ This section describes custom keybindings not present in the official distributi
 * Using `gnome-terminal` instead of `st` (for now).
 * Limited number of tags to 5 [0..4].
 * Increase the visual clue of selected window.
+* Changed default mode to columns
 
 ## License
 
