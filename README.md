@@ -105,7 +105,7 @@ This section describes custom keybindings not present in the official distributi
 
 * Removed Firefox from spawning on tag 9.
 * Removed Gimp from spawning in floating mode.
-* Increase master area to 70%.
+* Decrease master area to 65%.
 * Disabled resize hints.
 * Using `gnome-terminal` instead of `st` (for now).
 * Limited number of tags to 5 [0..4].
