@@ -70,6 +70,7 @@ static const char *screenshotcmd[] = { "screenshot", "full", NULL };
 static const char *screenshotselectcmd[] = { "screenshot", "select", NULL };
 static const char *powermenucmd[] = { "power", "menu", NULL };
 static const char *settingsmenucmd[] = { "settings", "menu", NULL };
+static const char *passwordsmenucmd[] = { "passwords", "menu", NULL };
 static const char *characterscmd[] = { "characters", "compose", NULL };
 static const char *emojicmd[] = { "characters", "emoji", NULL };
 
@@ -106,6 +107,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      4)
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = powermenucmd } },
 	{ MODKEY,                       XK_o,      spawn,          {.v = settingsmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = passwordsmenucmd } },
 	{ MODKEY,                       XK_Multi_key, spawn,       {.v = characterscmd } },
 	{ MODKEY|ShiftMask,             XK_Multi_key, spawn,       {.v = emojicmd } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = increasevol } },
