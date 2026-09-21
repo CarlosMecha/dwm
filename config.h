@@ -75,6 +75,11 @@ static const char *bookmarksmenucmd[] = { "bookmarks", "menu", NULL };
 static const char *bookmarkstabcmd[] = { "bookmarks", "tab", NULL };
 static const char *remotemenucmd[] = { "remote", "menu", NULL };
 static const char *projectsmenucmd[] = { "projects", "menu", NULL };
+static const char *musictogglecmd[] = { "music", "toggle", NULL };
+static const char *musicnextcmd[] = { "music", "next", NULL };
+static const char *musicprevcmd[] = { "music", "prev", NULL };
+static const char *musicmenucmd[] = { "music", "menu", NULL };
+static const char *musicplayercmd[] = { "music", "player", NULL };
 static const char *characterscmd[] = { "characters", "compose", NULL };
 static const char *emojicmd[] = { "characters", "emoji", NULL };
 
@@ -100,8 +105,11 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+	/* focusmon was here; every machine has one monitor, so the pair is the music transport
+	 * instead, next to Mod+/ for play/pause. Bring it back when a second monitor appears. */
+	{ MODKEY,                       XK_comma,  spawn,          {.v = musicprevcmd } },
+	{ MODKEY,                       XK_period, spawn,          {.v = musicnextcmd } },
+	{ MODKEY,                       XK_slash,  spawn,          {.v = musictogglecmd } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	TAGKEYS(                        XK_grave,                  0)
@@ -116,12 +124,17 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = bookmarkstabcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = projectsmenucmd } },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = remotemenucmd } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = musicmenucmd } },
+	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = musicplayercmd } },
 	{ MODKEY,                       XK_Multi_key, spawn,       {.v = characterscmd } },
 	{ MODKEY|ShiftMask,             XK_Multi_key, spawn,       {.v = emojicmd } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = increasevol } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = decreasevol } },
 	{ 0,                            XF86XK_AudioMute,        spawn, {.v = togglemute } },
 	{ 0,                            XF86XK_AudioMicMute,     spawn, {.v = togglemutemic } },
+	{ 0,                            XF86XK_AudioPlay,        spawn, {.v = musictogglecmd } },
+	{ 0,                            XF86XK_AudioNext,        spawn, {.v = musicnextcmd } },
+	{ 0,                            XF86XK_AudioPrev,        spawn, {.v = musicprevcmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = screenshotselectcmd } },
 	{ ShiftMask,                    XK_Print,  spawn,          {.v = screenshotcmd } },
 };
