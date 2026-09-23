@@ -7,6 +7,16 @@ Requirements
 ------------
 In order to build dwm you need the Xlib header files.
 
+On Debian, that is:
+
+    sudo apt install build-essential libx11-dev libxft-dev libxinerama-dev
+
+A machine converged as a workbench already has them: the workbench repo's
+desktop role installs the same list (plus libxrandr-dev for slock) and builds
+this fork itself, so nothing here needs doing by hand. A headless dev server
+gets no X client toolchain, so building or test-compiling the fork there needs
+the line above.
+
 
 Installation
 ------------
