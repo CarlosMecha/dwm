@@ -82,6 +82,7 @@ static const char *musicmenucmd[] = { "music", "menu", NULL };
 static const char *musicplayercmd[] = { "music", "player", NULL };
 static const char *characterscmd[] = { "characters", "compose", NULL };
 static const char *emojicmd[] = { "characters", "emoji", NULL };
+static const char *helpmenucmd[] = { "help", "menu", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -128,6 +129,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = musicplayercmd } },
 	{ MODKEY,                       XK_Multi_key, spawn,       {.v = characterscmd } },
 	{ MODKEY|ShiftMask,             XK_Multi_key, spawn,       {.v = emojicmd } },
+	{ 0,                            XK_F1,     spawn,          {.v = helpmenucmd } }, /* bare: no app gets F1, help is the desktop's */
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = increasevol } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = decreasevol } },
 	{ 0,                            XF86XK_AudioMute,        spawn, {.v = togglemute } },
